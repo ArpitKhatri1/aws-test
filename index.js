@@ -1,0 +1,14 @@
+import express from "express";
+
+const app = express();
+app.use(express.json());
+
+app.get("/", (res, req) => {
+  res.json({
+    message: "The instance is running fine",
+  });
+});
+
+app.listen(8080, () => {
+  console.log("The app listening on port 8080");
+});
